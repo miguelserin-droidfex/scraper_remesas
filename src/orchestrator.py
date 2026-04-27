@@ -36,10 +36,10 @@ async def run_all_scrapers(
     scrapers = []
     if run_afex:
         scrapers.append(("AFEX", AfexScraper()))
-    #if run_ria:
-       # scrapers.append(("RIA", RiaScraper()))
-    #if run_wu:
-       # scrapers.append(("WU", WesternUnionScraper()))
+    if run_ria:
+        scrapers.append(("RIA", RiaScraper()))
+    if run_wu:
+        scrapers.append(("WU", WesternUnionScraper()))
 
     for name, scraper in scrapers:
         try:
