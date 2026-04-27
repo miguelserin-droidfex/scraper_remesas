@@ -849,6 +849,7 @@ class AfexScraper(BaseScraper):
                 logger.warning(f"[AFEX] {country_name}: sin cotizaciones en ningún método")
 
         logger.info(f"[AFEX] Total resultados: {len(results)}")
+        print("AFEX RESULTADOS:", len(results))
         return results
 
     async def close(self):
